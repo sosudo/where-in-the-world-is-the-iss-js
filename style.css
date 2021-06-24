@@ -1,0 +1,39 @@
+/* Shivansh Gour */
+/* June 3 2021 */
+/* F Period */
+/* Final Project */
+/* The regular CSS setup */
+body {
+    padding: 0;
+    margin: 0;
+    color: "black";
+    background-color: white;
+}
+/* This allows the map to take up only part of the screen */
+html,
+body,
+#map {
+    height: 95%;
+    width: 100%;
+}
+/* Controls the top */
+.top {
+    bottom: 0;
+    left: 0;
+    width: 75%;
+    background-color: black;
+    height: 90%;
+}
+/* Controls the bottom */
+.bottom {
+    right: 0;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    bottom: 0;
+    height: 10%;
+}
+/* Makes sure the data is on one line */
+p {
+    display: inline-block;
+}
