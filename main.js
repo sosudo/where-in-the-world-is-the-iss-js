@@ -2,7 +2,7 @@
 window.onload = () => {
     let name = window.prompt("What's your name?");
     // Asks for the color mode
-	document.getElementById('name').innerHTML = name;
+	document.getElementById('user').innerHTML = name;
 	alert(`Hi, ${name}!`);
 	let colorMode = window.prompt("Dark (0) or Light (1) mode (input 0 or 1)?");
 	let backgroundColor;
