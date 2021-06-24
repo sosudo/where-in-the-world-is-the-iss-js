@@ -2,32 +2,33 @@
 window.onload = () => {
     let name = window.prompt("What's your name?");
     // Asks for the color mode
-		alert(`Hi, ${name}!`);
-		let colorMode = window.prompt("Dark (0) or Light (1) mode (input 0 or 1)?");
-		let backgroundColor;
-		let textColor;
-		if (colorMode == 0) {
-				textColor = "white";
-				backgroundColor = "black";
-		} else if (colorMode == 1) {
-				textColor = "black";
-				backgroundColor = "white";
-		} else {
-				textColor = "white";
-				backgroundColor = "black";
-		}
-		// document.getElementsByClassName and TagName return arrays, so we loop over the classes and tags and individually add them for each item in the array
-		let bg = document.getElementsByClassName("bottom");
-		for (let i = 0; i < bg.length; i++) {
-				bg[i].style.backgroundColor = backgroundColor;
-		}
-		let txt = document.getElementsByTagName("body");
-		for (let i = 0; i < txt.length; i++) {
-				txt[i].style.color = textColor;
-				txt[i].style.backgroundColor = backgroundColor;
-		}
-		// Renders the map
-		mapGen();
+	document.getElementById('name').innerHTML = name;
+	alert(`Hi, ${name}!`);
+	let colorMode = window.prompt("Dark (0) or Light (1) mode (input 0 or 1)?");
+	let backgroundColor;
+	let textColor;
+	if (colorMode == 0) {
+			textColor = "white";
+			backgroundColor = "black";
+	} else if (colorMode == 1) {
+			textColor = "black";
+			backgroundColor = "white";
+	} else {
+			textColor = "white";
+			backgroundColor = "black";
+	}
+	// document.getElementsByClassName and TagName return arrays, so we loop over the classes and tags and individually add them for each item in the array
+	let bg = document.getElementsByClassName("bottom");
+	for (let i = 0; i < bg.length; i++) {
+			bg[i].style.backgroundColor = backgroundColor;
+	}
+	let txt = document.getElementsByTagName("body");
+	for (let i = 0; i < txt.length; i++) {
+			txt[i].style.color = textColor;
+			txt[i].style.backgroundColor = backgroundColor;
+	}
+	// Renders the map
+	mapGen();
 };
 // This function determines the latitude and longitude of the ISS, creates the map, and places a marker there that corresponds to the ISS's location
 function mapGen() {
